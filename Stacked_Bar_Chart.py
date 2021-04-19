@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 
 
 def plot_stacked_bar(data, series_labels, category_labels=None,
-                     show_values=False, value_format="{}", y_label=None,
+                     show_values=False, value_format="{}", title=None, y_label=None,
                      colors=None, grid=False, reverse=False):
     """Plots a stacked bar chart with the data and labels provided.
 
@@ -25,6 +25,7 @@ def plot_stacked_bar(data, series_labels, category_labels=None,
                        be shown on each bar (badly handles nan-type)
     value_format    -- format string for numeric value labels
                        (default is "{}")
+    title           -- title for the plot (str)
     y_label         -- label for y-axis (str)
     colors          -- list of color labels
                        (will cycle through default colors if none are given)
@@ -60,6 +61,9 @@ def plot_stacked_bar(data, series_labels, category_labels=None,
 
     if category_labels:
         plt.xticks(ind, category_labels)
+
+    if title:
+        plt.title(title, fontsize='large')
 
     if y_label:
         plt.ylabel(y_label)
