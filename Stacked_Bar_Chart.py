@@ -5,6 +5,10 @@ Created on 03.03.2021
 """
 
 
+import numpy as np
+import matplotlib.pyplot as plt
+
+
 def plot_stacked_bar(data, series_labels, category_labels=None,
                      show_values=False, value_format="{}", y_label=None,
                      colors=None, grid=False, reverse=False):
@@ -69,7 +73,3 @@ def plot_stacked_bar(data, series_labels, category_labels=None,
                 plt.text(bar.get_x() + w / 2, bar.get_y() + h / 2,
                          value_format.format(h), ha="center",
                          va="center")
-
-
-import numpy as np
-import matplotlib.pyplot as plt
