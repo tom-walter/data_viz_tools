@@ -1,1 +1,2 @@
-# data_viz_tools
+# Data Visualization Tools
+Build with Python's matplotlib & numpy.
